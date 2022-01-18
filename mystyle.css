@@ -1,0 +1,30 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-image: url(https://media.discordapp.net/attachments/900784687117660230/932955837016735814/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png?width=295&height=536);
+}
+#container{
+    width: 90%;
+    height: 100vh;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 50px;
+}
+.left_container{
+    width: 35%;
+    height: 100%;
+    border-right: solid 2px white;
+    background-color: #09161E;
+}
+.right_container{
+    width: 65%;
+    height: 100%;
+    background-image: url(https://images-ext-1.discordapp.net/external/JYkTAhOVokdezxtd4zc1zZPpU6VoUq9AQoSihbIONiI/https/i.pinimg.com/originals/85/ec/df/85ecdf1c3611ecc9b7fa85282d9526e0.jpg?width=363&height=536);
+}
+.top_left,
+.top_right{
+    height: 70px;
+    width: 100%;
+    background-color: #54B29B;
+}
