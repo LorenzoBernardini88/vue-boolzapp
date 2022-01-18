@@ -13,7 +13,9 @@
 </head>
 <body>
     <div id="container">
+        <!-- COLONNA SINISTRA -->
         <div class="left_container">
+
             <div class="top_left">
                 <div class="img_profilo_container">
                     <img src="img/lorenzo.jpg" alt="">
@@ -24,6 +26,7 @@
                     <i class="fas fa-undo"></i>
                 </div>
             </div>
+
             <div class="box_notifiche">
                 <i class="far fa-bell-slash"></i>
                 <div class="testo_notifiche">
@@ -31,9 +34,11 @@
                     <span>Attiva notifiche Desktop</span>
                 </div>
             </div>
+
             <div class="search_container">
                 <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat">
             </div>
+
             <div v-for='(contatto, indice) in contacts'class="box_contact">
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
@@ -42,6 +47,7 @@
                     <span class="name_contact">{{contatto.name}}</span>
                 </div>
             </div>
+
         </div>
         <div class="right_container">
             <div class="top_right"></div>
