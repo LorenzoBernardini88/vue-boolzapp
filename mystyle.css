@@ -44,6 +44,21 @@ body{
 .left_icon_container i{
     margin-left: 15px;
 }
+.box_notifiche{
+    background-color: #7be3e8;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box_notifiche i{
+    color: white;
+    font-size: 50px;
+}
+.box_notifiche span{
+    text-decoration: underline;
+}
 .img_profilo_container{
     display: inline-block;
     background-color: white;
