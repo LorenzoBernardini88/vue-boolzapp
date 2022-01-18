@@ -4,6 +4,7 @@ body{
     box-sizing: border-box;
     background-image: url(https://media.discordapp.net/attachments/900784687117660230/932955837016735814/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png?width=295&height=536);
 }
+/* proprietà Macro struttura */
 #container{
     width: 90%;
     height: 100vh;
@@ -27,4 +28,42 @@ body{
     height: 70px;
     width: 100%;
     background-color: #54B29B;
+}
+
+/* proprietà elementi .left_container */
+.top_left{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_icon_container{
+    margin-right: 10px;
+    color: white;
+}
+.left_icon_container i{
+    margin-left: 15px;
+}
+.img_profilo_container{
+    display: inline-block;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.search_container{
+    
+    text-align: center;
+    border-bottom: solid 1px grey;
+    padding: 5px 0px;
+}
+.search_container input{
+    border: none;
+    border-radius: 20px;
+    width: 90%;
+    height: 40px;
+    text-align: center;
+    color: grey;
+    background-color: #2E3336;
 }
