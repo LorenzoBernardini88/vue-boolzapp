@@ -3,6 +3,7 @@ body{
     padding:0;
     box-sizing: border-box;
     background-image: url(https://media.discordapp.net/attachments/900784687117660230/932955837016735814/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png?width=295&height=536);
+    font-family:'Roboto', sans-serif ;
 }
 /* proprietà Macro struttura */
 #container{
