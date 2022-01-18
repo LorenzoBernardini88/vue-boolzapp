@@ -4,7 +4,7 @@ let app = new Vue({
         contacts: [
             {
                 name: 'Michele',
-                avatar: '_1',
+                avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png',
                 visible: true,
                 messages: [
                     {
@@ -26,7 +26,7 @@ let app = new Vue({
             },
             {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043274-avatar-einstein-professor-scientist_113259.png',
                 visible: true,
                 messages: [
                     {
@@ -48,7 +48,7 @@ let app = new Vue({
             },
             {
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043262-avatar-man-muslim_113273.png',
                 visible: true,
                 messages: [
                     {
@@ -70,7 +70,7 @@ let app = new Vue({
             },
             {
                 name: 'Luisa',
-                avatar: '_4',
+                avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png',
                 visible: true,
                 messages: [
                     {

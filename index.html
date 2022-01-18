@@ -15,7 +15,9 @@
     <div id="container">
         <div class="left_container">
             <div class="top_left">
-                <div class="img_profilo_container"></div>
+                <div class="img_profilo_container">
+                    <img src="img/lorenzo.jpg" alt="">
+                </div>
                 <div class="left_icon_container">
                     <i class="fas fa-comment-alt"></i>
                     <i class="fas fa-ellipsis-v"></i>
@@ -33,7 +35,9 @@
                 <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div v-for='(contatto, indice) in contacts'class="box_contact">
-                <div class="img_profilo_container"></div>
+                <div class="img_profilo_container">
+                    <img :src="contatto.avatar" alt="">
+                </div>
                 <div class="info_contact">
                     <span class="name_contact">{{contatto.name}}</span>
                 </div>
