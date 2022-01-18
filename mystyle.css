@@ -31,12 +31,22 @@ body{
     background-color: #54B29B;
 }
 
-/* proprietà elementi .left_container */
+/* PROPRIETA LEFT_CONTAINER */
+
+/* .top_left */
 .top_left{
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.img_profilo_container{
+    display: inline-block;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
 }
 .left_icon_container{
     margin-right: 10px;
@@ -45,6 +55,7 @@ body{
 .left_icon_container i{
     margin-left: 15px;
 }
+/* box notiche */
 .box_notifiche{
     background-color: #7be3e8;
     height: 80px;
@@ -60,14 +71,7 @@ body{
 .box_notifiche span{
     text-decoration: underline;
 }
-.img_profilo_container{
-    display: inline-block;
-    background-color: white;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
+/* input text search */
 .search_container{
     
     text-align: center;
@@ -82,4 +86,17 @@ body{
     text-align: center;
     color: grey;
     background-color: #2E3336;
+}
+/* box contact */
+.box_contact{
+    color: white;
+    height: 80px;
+    width: 100%;
+    border-bottom: solid 1px grey;
+    display: flex;
+    align-items: center;
+    /* background-color: #2E3336; */
+}
+.box_contact .info_contact{
+    margin-left: 20px;
 }
