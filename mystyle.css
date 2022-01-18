@@ -112,20 +112,24 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-
 .info_message,
 .info_contact .messaggio {
     font-size: 14px;
     color:#869695 ;
 }
 
+/* PROPRIETA' RIGHT CONTAINER */
+
+/* NB:per proprietà img_container e img profilo vedi 'proprietà left_container' */
+
+/* proprietà div .top_right */
 .top_right{
     padding: 0px 10px;
     display: flex;
     align-items: center;
     justify-content:space-between;
 }
-
+/* proprietà div .chat_container */
 .chat_container{
     height: calc(100vh - 140px);
     padding: 0px 50px;
