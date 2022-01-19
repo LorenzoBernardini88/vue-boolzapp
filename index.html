@@ -39,7 +39,7 @@
                 <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch'>
             </div>
             <!-- box con img, informazioni e conversazione contatto -->
-            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)'>
+            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)' :class="({hidden: contatto.visible})" @keyup.enter="searchContact">
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
                 </div>

@@ -123,6 +123,12 @@ let app = new Vue({
             this.contacts[this.corrente].messages.push(objSend);
             this.valoreTesto = '';
             this.answer = setTimeout(this.answerMesssage,2000);
+        },
+        searchContact : function(){
+            if(!this.contacts[this.corrente].name.includes(this.valoreSearch)){
+                this.visible = true
+                console.log('ciao')
+            }
         }
     }
 })

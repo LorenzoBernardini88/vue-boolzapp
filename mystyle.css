@@ -16,6 +16,10 @@ body{
 i:hover{
     cursor: pointer;
 }
+/* CLASSE HIDDEN PER FUNZIONE searchContact in VUE.JS */
+.hidden{
+    display: none;
+}
 
 /* proprietà Macro struttura */
 #container{
