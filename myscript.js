@@ -125,10 +125,11 @@ let app = new Vue({
             this.answer = setTimeout(this.answerMesssage,2000);
         },
         searchContact : function(indice){
-            this.corrente = indice;
-            if(this.contacts[this.corrente].name.includes(this.valoreSearch)){
-                this.visible = true
-                console.log('ciao')
+            
+            if(this.contacts[indice].name.includes(this.valoreSearch)){
+                this.contacts[indice].visible=false;
+            }else{
+                this.contacts[indice].visible=true;
             }
         }
     }
