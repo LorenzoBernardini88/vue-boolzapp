@@ -58,8 +58,8 @@
             <!-- contenitore 'top right' che contiene img profilo e icone -->
             <div class="top_right">
                 <div class="img_profilo_container">
-                    <img src="img/lorenzo.jpg" alt="">
-                    <div class="nome_utente">Nome Utente</div>
+                    <img :src="contacts[corrente].avatar" alt="">
+                    <div class="nome_utente">{{contacts[corrente].name}}</div>
                 </div>
                 <div class="icon_container">
                     <i class="fas fa-video"></i>
@@ -76,7 +76,7 @@
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
             <div class="footer_right">
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto'>
                 <i class="fas fa-microphone"></i>
             </div>
         </div>

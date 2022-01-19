@@ -2,6 +2,7 @@ let app = new Vue({
     el : '#container',
 
     data:{
+        valoreTesto : '',
         corrente: 1,
         contacts: [
             {
