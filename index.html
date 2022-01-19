@@ -48,7 +48,7 @@
                     <span class="messagge">ciao salame</span>
                 </div>
                 <div class="info_message">
-                    <span>data e ora msg</span>
+                    <span>{{contatto.messages[corrente].date}}</span>
                 </div>
             </div>
 
@@ -70,13 +70,13 @@
             </div>
             <!-- contenitore conversazione boolzapp -->
             <div class="chat_container">
-                    <div v-for="(testo,indice) in contacts[corrente].messages"  :class="addMessage(indice)">
+                    <div v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
                         {{testo.text}}
                     </div>
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
             <div class="footer_right">
-                <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto'>
+                <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage'>
                 <i class="fas fa-microphone"></i>
             </div>
         </div>

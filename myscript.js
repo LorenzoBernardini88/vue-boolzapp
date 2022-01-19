@@ -3,6 +3,7 @@ let app = new Vue({
 
     data:{
         valoreTesto : '',
+        answer : null,
         corrente: 1,
         contacts: [
             {
@@ -91,12 +92,33 @@ let app = new Vue({
         ]
     },
     methods:{
-        addMessage:function(indice){
+        viewMessage:function(indice){
             if(this.contacts[this.corrente].messages[indice].status == 'received'){
                 return 'box_message_received'
             }else{
                 return 'box_message_sent'
             }
+        },
+        answerMesssage: function(){
+            let objAnswer =
+            {
+                date : '',
+                text: 'Bravo',
+                status: 'received'
+            }
+            this.contacts[this.corrente].messages.push(objAnswer);
+        },
+
+        sendMessage : function(){
+            let objSend = 
+            {
+                date : '',
+                text: this.valoreTesto,
+                status: 'sent'
+            }
+            this.contacts[this.corrente].messages.push(objSend);
+            this.answer = setTimeout(this.answerMesssage,2000);
+            
         }
     }
 })
