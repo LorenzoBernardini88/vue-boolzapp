@@ -10,7 +10,7 @@ let app = new Vue({
             {
                 name: 'Michele',
                 avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -32,7 +32,7 @@ let app = new Vue({
             {
                 name: 'Fabio',
                 avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043274-avatar-einstein-professor-scientist_113259.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                     date: '20/03/2020 16:30:00',
@@ -54,7 +54,7 @@ let app = new Vue({
             {
                 name: 'Samuele',
                 avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043262-avatar-man-muslim_113273.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                     date: '28/03/2020 10:10:40',
@@ -76,7 +76,7 @@ let app = new Vue({
             {
                 name: 'Luisa',
                 avatar: 'https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -125,10 +125,8 @@ let app = new Vue({
             this.answer = setTimeout(this.answerMesssage,2000);
         },
         searchContact : function(indice){
-            
-            if(this.contacts[indice].name.includes(this.valoreSearch)){
-                this.contacts[indice].visible=false;
-            }else{
+
+            if(!this.contacts[indice].name.includes(this.valoreSearch)){
                 this.contacts[indice].visible=true;
             }
         }
