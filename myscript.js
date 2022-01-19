@@ -100,6 +100,10 @@ let app = new Vue({
                 return 'box_message_sent'
             }
         },
+        viewChat: function(indice){
+            this.corrente = indice;
+            console.log(this.corrente)
+        },
         answerMesssage: function(){
             let objAnswer =
             {

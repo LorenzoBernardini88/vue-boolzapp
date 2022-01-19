@@ -39,7 +39,7 @@
                 <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch'>
             </div>
             <!-- box con img, informazioni e conversazione contatto -->
-            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='corrente = indice'>
+            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)'>
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
                 </div>
@@ -48,7 +48,7 @@
                     <span class="messagge">{{contatto.messages.at(-1).text}}</span>
                 </div>
                 <div class="info_message">
-                    <span>{{contatto.messages[corrente].date}}</span>
+                    <span>{{contatto.messages.at(-1).date}}</span>
                 </div>
             </div>
 
