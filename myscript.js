@@ -108,7 +108,6 @@ let app = new Vue({
             }
             this.contacts[this.corrente].messages.push(objAnswer);
         },
-
         sendMessage : function(){
             let objSend = 
             {
@@ -117,8 +116,8 @@ let app = new Vue({
                 status: 'sent'
             }
             this.contacts[this.corrente].messages.push(objSend);
+            this.valoreTesto = '';
             this.answer = setTimeout(this.answerMesssage,2000);
-            
         }
     }
 })
