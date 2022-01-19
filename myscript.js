@@ -2,9 +2,10 @@ let app = new Vue({
     el : '#container',
 
     data:{
-        valoreTesto : '',
+        valoreSearch:'',
+        valoreTesto: '',
         answer : null,
-        corrente: 1,
+        corrente: 0,
         contacts: [
             {
                 name: 'Michele',
