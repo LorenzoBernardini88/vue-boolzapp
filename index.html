@@ -30,7 +30,7 @@
             <div class="box_notifiche">
                 <i class="far fa-bell-slash"></i>
                 <div class="testo_notifiche">
-                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <div>Ricevi notifiche di nuovi messaggi</div>
                     <span>Attiva notifiche Desktop</span>
                 </div>
             </div>
@@ -39,16 +39,16 @@
                 <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat">
             </div>
             <!-- box con img, informazioni e conversazione contatto -->
-            <div v-for='(contatto, indice) in contacts'class="box_contact">
+            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='corrente = indice'>
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
                 </div>
                 <div class="info_contact">
                     <span class="name_contact">{{contatto.name}}</span>
-                    <span class="messaggio">ciao salame</span>
+                    <span class="messagge">ciao salame</span>
                 </div>
                 <div class="info_message">
-                    <span>l'anno del mai</span>
+                    <span>data e ora msg</span>
                 </div>
             </div>
 
@@ -70,8 +70,9 @@
             </div>
             <!-- contenitore conversazione boolzapp -->
             <div class="chat_container">
-                <div class="box_message_send">ciao</div>
-                <div class="box_message_recived">ciao </div>
+                    <div v-for="(testo,indice) in contacts[corrente].messages"  :class="addMessage(indice)">
+                        {{testo.text}}
+                    </div>
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
             <div class="footer_right">

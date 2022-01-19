@@ -1,6 +1,8 @@
 let app = new Vue({
     el : '#container',
+
     data:{
+        corrente: 1,
         contacts: [
             {
                 name: 'Michele',
@@ -86,5 +88,14 @@ let app = new Vue({
                 ],
             },
         ]
+    },
+    methods:{
+        addMessage:function(indice){
+            if(this.contacts[this.corrente].messages[indice].status == 'received'){
+                return 'box_message_received'
+            }else{
+                return 'box_message_sent'
+            }
+        }
     }
 })
