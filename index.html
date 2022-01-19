@@ -36,10 +36,10 @@
             </div>
             <!-- div con input text 'search'  -->
             <div class="search_container">
-                <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch'>
+                <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch'  @keyup.enter="searchContact(indice)">
             </div>
             <!-- box con img, informazioni e conversazione contatto -->
-            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)' :class="({hidden: contatto.visible})" @keyup.enter="searchContact">
+            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)' :class="({hidden: contatto.visible})" :class="searchContact(indice)">
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
                 </div>

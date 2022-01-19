@@ -124,8 +124,9 @@ let app = new Vue({
             this.valoreTesto = '';
             this.answer = setTimeout(this.answerMesssage,2000);
         },
-        searchContact : function(){
-            if(!this.contacts[this.corrente].name.includes(this.valoreSearch)){
+        searchContact : function(indice){
+            this.corrente = indice;
+            if(this.contacts[this.corrente].name.includes(this.valoreSearch)){
                 this.visible = true
                 console.log('ciao')
             }
