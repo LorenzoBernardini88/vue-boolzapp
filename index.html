@@ -72,7 +72,11 @@
             <!-- contenitore conversazione boolzapp -->
             <div class="chat_container">
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
-                        <i class="fas fa-angle-down"></i>
+                        <i class="fas fa-angle-down" @click='downMenuMessage'></i>
+                        <ul class="dropdown_menu_message">
+                            <li>Message Info</li>
+                            <li>Delete Message</li>
+                        </ul>
                         {{testo.text}}
                     </div>
             </div>

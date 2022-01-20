@@ -134,6 +134,9 @@ let app = new Vue({
                     elemento.visible=false;
                 }
             });
+        },
+        downMenuMessage: function(){
+            
         }
     }
 })
