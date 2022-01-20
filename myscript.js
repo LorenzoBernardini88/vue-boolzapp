@@ -140,5 +140,6 @@ let app = new Vue({
         downMenuMessage: function(indice){
             this.correnteDropDown=indice
         }
+
     }
 })
