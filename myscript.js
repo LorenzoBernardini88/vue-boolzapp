@@ -93,6 +93,7 @@ let app = new Vue({
         ]
     },
     methods:{
+        
         viewMessage:function(indice){
             if(this.contacts[this.corrente].messages[indice].status == 'received'){
                 return 'box_message_received'
@@ -124,12 +125,13 @@ let app = new Vue({
             this.valoreTesto = '';
             this.answer = setTimeout(this.answerMesssage,2000);
         },
-        
         searchContact : function(){
             this.contacts.forEach(elemento => {
-                if(!elemento.name.includes(this.valoreSearch)){
+                if(!elemento.name.toLowerCase().includes(this.valoreSearch)){
                     console.log(elemento.visible);
                     elemento.visible=true;
+                }else{
+                    elemento.visible=false;
                 }
             });
         }

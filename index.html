@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="container">
+
         <!-- COLONNA SINISTRA -->
         <div class="left_container">
             <!-- contenitore 'top left' che contiene img profilo e icone -->
@@ -48,7 +49,7 @@
                     <span class="messagge">{{contatto.messages.at(-1).text}}</span>
                 </div>
                 <div class="info_message">
-                    <span>{{contatto.messages[contatto.messages.length-1].date}}</span>
+                    <span>{{contatto.messages.at(-1).date}}</span>
                 </div>
             </div>
 
@@ -79,6 +80,7 @@
                 <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage'>
                 <i class="fas fa-microphone"></i>
             </div>
+            
         </div>
 
     </div>
