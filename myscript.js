@@ -124,14 +124,14 @@ let app = new Vue({
             this.valoreTesto = '';
             this.answer = setTimeout(this.answerMesssage,2000);
         },
-        searchContact : function(indice){
-
-            if(!this.contacts[indice].name.includes(this.valoreSearch)){
-                this.contacts[indice].visible=true;
-                console.log('ciaone');
-            }else{
-                console.log(' niente ciaone');
-            }
+        
+        searchContact : function(){
+            this.contacts.forEach(elemento => {
+                if(!elemento.name.includes(this.valoreSearch)){
+                    console.log(elemento.visible);
+                    elemento.visible=true;
+                }
+            });
         }
     }
 })

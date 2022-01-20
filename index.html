@@ -36,10 +36,10 @@
             </div>
             <!-- div con input text 'search'  -->
             <div class="search_container">
-                <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch' @keyup="searchContact(corrente)">
+                <input type="text"  id="user_search" placeholder="Cerca o inizia una nuova chat" v-model='valoreSearch' @keyup="searchContact">
             </div>
             <!-- box con img, informazioni e conversazione contatto -->
-            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)'  :class="{hidden: contatto.visible}" :class="searchContact(indice)" >
+            <div v-for='(contatto, indice) in contacts'class="box_contact" @click='viewChat(indice)'  :class="{hidden: contatto.visible}" >
                 <div class="img_profilo_container">
                     <img :src="contatto.avatar" alt="">
                 </div>
@@ -48,7 +48,7 @@
                     <span class="messagge">{{contatto.messages.at(-1).text}}</span>
                 </div>
                 <div class="info_message">
-                    <span>{{contatto.messages.at(-1).date}}</span>
+                    <span>{{contatto.messages[contatto.messages.length-1].date}}</span>
                 </div>
             </div>
 
