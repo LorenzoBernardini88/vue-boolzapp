@@ -5,6 +5,7 @@ let app = new Vue({
         valoreSearch:'',
         valoreTesto: '',
         answer : null,
+        block: false,
         corrente: 0,
         contacts: [
             {
@@ -136,7 +137,11 @@ let app = new Vue({
             });
         },
         downMenuMessage: function(){
-            
+            if(this.block == false){
+                this.block = true;
+            }else{
+                this.block = false;
+            }
         }
     }
 })

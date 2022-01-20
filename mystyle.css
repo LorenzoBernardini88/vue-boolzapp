@@ -21,8 +21,12 @@ i:hover{
 .hidden{
     display: none!important;
 }
+/* CLASSE SHOW PER DROPDOWN MENU' MESSAGE */
+.show{
+    display: block!important;
+}
 
-/* proprietà Macro struttura */
+/* PROPRIETA' MACRO STRUTTURA */
 #container{
     width: 90%;
     height: 100vh;

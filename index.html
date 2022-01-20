@@ -73,7 +73,7 @@
             <div class="chat_container">
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
                         <i class="fas fa-angle-down" @click='downMenuMessage'></i>
-                        <ul class="dropdown_menu_message">
+                        <ul class="dropdown_menu_message" :class="{show: block}">
                             <li>Message Info</li>
                             <li>Delete Message</li>
                         </ul>
