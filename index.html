@@ -46,10 +46,10 @@
                 </div>
                 <div class="info_contact">
                     <span class="name_contact">{{contatto.name}}</span>
-                    <span class="messagge">{{contatto.messages.at(-1).text}}</span>
+                    <span class="messagge" v-if="contatto.messages.length >0">{{contatto.messages.at(-1).text}}</span>
                 </div>
                 <div class="info_message">
-                    <span>{{contatto.messages.at(-1).date}}</span>
+                    <span v-if="contatto.messages.length >0">{{contatto.messages.at(-1).date}}</span>
                 </div>
             </div>
 
@@ -71,11 +71,11 @@
             </div>
             <!-- contenitore conversazione boolzapp -->
             <div class="chat_container" >
-                    <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
+                    <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)" >
                         <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @dblclick='correnteDropDown = null'></i>
                         <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
                             <li>Message Info</li>
-                            <li >Delete Message</li>
+                            <li @click="deleteMessage(indice)">Delete Message</li>
                         </ul>
                         {{testo.text}}
                     </div>

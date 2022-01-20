@@ -139,7 +139,10 @@ let app = new Vue({
         },
         downMenuMessage: function(indice){
             this.correnteDropDown=indice
+        },
+        
+        deleteMessage : function(indice){
+            this.contacts[this.corrente].messages.splice(indice,1);
         }
-
     }
-})
+}) 
