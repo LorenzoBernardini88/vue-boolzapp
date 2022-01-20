@@ -110,7 +110,7 @@ let app = new Vue({
         answerMesssage: function(){
             let objAnswer =
             {
-                date : '',
+                date : `${dayjs().hour()}:${dayjs().minute()}`,
                 text: 'Bravo',
                 status: 'received'
             }
@@ -119,7 +119,7 @@ let app = new Vue({
         sendMessage : function(){
             let objSend = 
             {
-                date : '',
+                date : `${dayjs().hour()}:${dayjs().minute()}`,
                 text: this.valoreTesto,
                 status: 'sent'
             }

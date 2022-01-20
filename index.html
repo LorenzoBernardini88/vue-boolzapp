@@ -78,6 +78,7 @@
                             <li @click="deleteMessage(indice)">Delete Message</li>
                         </ul>
                         {{testo.text}}
+                        <span class="date_message">{{testo.date}}</span>
                     </div>
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
@@ -93,6 +94,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> 
     <script src="myscript.js"></script>
 </body>
 </html>

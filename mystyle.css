@@ -17,6 +17,10 @@ li:hover,
 i:hover{
     cursor: pointer;
 }
+.box_message i:hover{
+    cursor: pointer;
+    opacity: 1;
+}
 /* CLASSE HIDDEN PER FUNZIONE searchContact in VUE.JS */
 .hidden{
     display: none!important;
@@ -153,14 +157,16 @@ i:hover{
     flex-direction: column;
 }
 .box_message{
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
 }
 .box_message i{
     position: absolute;
     top:2px;
     right: 4px;
+    opacity: 0;
 }
+
 .box_message_sent{
     background-color: teal;
     align-self: flex-end ;
@@ -172,11 +178,17 @@ i:hover{
 .box_message_received{
     color: white;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     width:fit-content;
     max-width: 40%;
     word-break: break-word;
+}
+.date_message{
+    position: absolute;
+    bottom: 5px;
+    right:3px;
+    font-size: 12px;
 }
 /* footer right input text message */
 .footer_right{
