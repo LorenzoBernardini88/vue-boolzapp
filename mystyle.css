@@ -69,9 +69,11 @@ i:hover{
     background-size: cover;
     border-radius: 50%;
 }
-.icon_container i{
-    margin-left: 15px;
+.icon_container{
+    display: flex;
+    gap: 15px;
 }
+
 /* box notiche */
 .box_notifiche{
     background-color: teal;

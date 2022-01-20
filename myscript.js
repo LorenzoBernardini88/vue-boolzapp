@@ -128,6 +128,9 @@ let app = new Vue({
 
             if(!this.contacts[indice].name.includes(this.valoreSearch)){
                 this.contacts[indice].visible=true;
+                console.log('ciaone');
+            }else{
+                console.log(' niente ciaone');
             }
         }
     }
