@@ -7,6 +7,7 @@ let app = new Vue({
         answer : null,
         block: false,
         corrente: 0,
+        correnteDropDown:null,
         contacts: [
             {
                 name: 'Michele',
@@ -136,12 +137,8 @@ let app = new Vue({
                 }
             });
         },
-        downMenuMessage: function(){
-            if(this.block == false){
-                this.block = true;
-            }else{
-                this.block = false;
-            }
+        downMenuMessage: function(indice){
+            this.correnteDropDown=indice
         }
     }
 })
