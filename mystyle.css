@@ -13,6 +13,7 @@ body{
 .box_contact:hover{
     background-color:#2E3336 ;
 }
+li:hover,
 i:hover{
     cursor: pointer;
 }
@@ -205,4 +206,11 @@ i:hover{
     color: black;
     text-align: center;
     list-style: none;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    display: none;
+}
+.dropdown_menu_message li{
+    padding: 5px;
 }
