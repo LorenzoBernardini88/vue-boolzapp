@@ -147,6 +147,15 @@ i:hover{
     display: flex;
     flex-direction: column;
 }
+.box_message{
+    font-size: 14px;
+    position: relative;
+}
+.box_message i{
+    position: absolute;
+    top:2px;
+    right: 4px;
+}
 .box_message_sent{
     background-color: teal;
     align-self: flex-end ;
@@ -162,7 +171,7 @@ i:hover{
     border-radius: 8px;
     width:fit-content;
     max-width: 40%;
-    word-break: break-all;
+    word-break: break-word;
 }
 /* footer right input text message */
 .footer_right{

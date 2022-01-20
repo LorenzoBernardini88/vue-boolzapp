@@ -71,7 +71,8 @@
             </div>
             <!-- contenitore conversazione boolzapp -->
             <div class="chat_container">
-                    <div v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
+                    <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
+                        <i class="fas fa-angle-down"></i>
                         {{testo.text}}
                     </div>
             </div>
@@ -80,7 +81,7 @@
                 <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage'>
                 <i class="fas fa-microphone"></i>
             </div>
-            
+
         </div>
 
     </div>
