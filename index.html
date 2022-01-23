@@ -55,10 +55,15 @@
 
         </div>
         <!-- COLONNA DESTRA -->
-        <div class="right_container">
-            
+        <div  v-if="corrente == -1" class="intro">
+            <img src="img/img_intro.jpg" alt="">
+            <h1>Mantieni il telefono connesso</h1>
+            <p>Boolzapp si collega al tuo telfono per sincronizzare i messaggi.Per ridurre l'utilizzo dei dati,collega il telefono al WI-FI</p>
+            <div class="footer_intro"></div>
+        </div>
+        <div v-else class="right_container">
             <!-- contenitore 'top right' che contiene img profilo e icone -->
-            <div v-if="corrente !=null" class="top_right">
+            <div  class="top_right">
                 <div class="img_profilo_container">
                     <img :src="contacts[corrente].avatar" alt="">
                     <div class="nome_utente">{{contacts[corrente].name}}</div>
@@ -71,7 +76,7 @@
                 </div>
             </div>
             <!-- contenitore conversazione boolzapp -->
-            <div v-if="corrente !=null" class="chat_container" >
+            <div  class="chat_container" >
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)" >
                         <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @dblclick='correnteDropDown = -1'></i>
                         <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
@@ -83,11 +88,11 @@
                     </div>
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
-            <div v-if="corrente !=null" class="footer_right">
-                <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage'>
+            <div  class="footer_right">
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage(corrente)'>
                 <i class="fas fa-microphone"></i>
             </div>
-
         </div>
 
     </div>

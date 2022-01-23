@@ -6,7 +6,7 @@ let app = new Vue({
         valoreTesto: '',
         answer : null,
         block: false,
-        corrente: null,
+        corrente: -1,
         correnteDropDown:-1,
         
         contacts: [
@@ -110,7 +110,7 @@ let app = new Vue({
             this.correnteDropDown = null;
         },
         //funzione che crea messaggio di risposta.
-        answerMesssage: function(){
+        answerMesssage: function(corrente){
             
             let objAnswer =
             {
@@ -118,21 +118,21 @@ let app = new Vue({
                 text: 'Bravo',
                 status: 'received'
             }
-            this.contacts[this.corrente].messages.push(objAnswer);
+            this.contacts[corrente].messages.push(objAnswer);
         },
         //funzione che inva messaggio.
-        sendMessage : function(){
-            
+        sendMessage : function(corrente){
             let objSend = 
             {
                 date : `${dayjs().hour()}:${dayjs().minute()}`,
                 text: this.valoreTesto,
                 status: 'sent'
             }
-            this.contacts[this.corrente].messages.push(objSend);
+            this.contacts[corrente].messages.push(objSend);
             this.valoreTesto = '';
-            const contattoIndice = this.corrente;
-            this.answer = setTimeout(this.answerMesssage(contattoIndice),3000);
+            setTimeout(() =>{
+                this.answerMesssage(corrente);
+            },3000)
         },
         //funzione collegata all'input text colonna di sinistra che filtra la lista contatti.
         searchContact : function(){
