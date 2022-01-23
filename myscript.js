@@ -96,7 +96,7 @@ let app = new Vue({
         ]
     },
     methods:{
-        
+        //funzione che assegna le classe css al box_message in base allo 'status' del messaggio
         viewMessage:function(indice){
             if(this.contacts[this.corrente].messages[indice].status == 'received'){
                 return 'box_message_received'
@@ -104,10 +104,12 @@ let app = new Vue({
                 return 'box_message_sent'
             }
         },
+        //funzione che assegna valore 'indice alla variabile d'appoggio 'corrente'
         viewChat: function(indice){
             this.corrente = indice;
             this.correnteDropDown = null;
         },
+        //funzione che crea messaggio di risposta.
         answerMesssage: function(){
             
             let objAnswer =
@@ -118,6 +120,7 @@ let app = new Vue({
             }
             this.contacts[this.corrente].messages.push(objAnswer);
         },
+        //funzione che inva messaggio.
         sendMessage : function(){
             
             let objSend = 
@@ -131,6 +134,7 @@ let app = new Vue({
             const contattoIndice = this.corrente;
             this.answer = setTimeout(this.answerMesssage(contattoIndice),3000);
         },
+        //funzione collegata all'input text colonna di sinistra che filtra la lista contatti.
         searchContact : function(){
             this.contacts.forEach(elemento => {
                 if(!elemento.name.toLowerCase().includes(this.valoreSearch)){
@@ -141,10 +145,12 @@ let app = new Vue({
                 }
             });
         },
+        /*funzione che attribuisce alla variabile d'appoggio 'correnteDropDown' il valore indice 
+        e apre solo il dropdown menu richiesto*/
         downMenuMessage: function(indice){
             this.correnteDropDown=indice
         },
-        
+        //funzione per cancellare il messaggio tramite il menu dropdown.
         deleteMessage : function(indice){
             this.contacts[this.corrente].messages.splice(indice,1);
         }
