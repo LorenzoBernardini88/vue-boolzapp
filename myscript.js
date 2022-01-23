@@ -7,7 +7,8 @@ let app = new Vue({
         answer : null,
         block: false,
         corrente: 0,
-        correnteDropDown:null,
+        correnteDropDown:-1,
+        
         contacts: [
             {
                 name: 'Michele',
@@ -105,9 +106,10 @@ let app = new Vue({
         },
         viewChat: function(indice){
             this.corrente = indice;
-            console.log(this.corrente)
+            this.correnteDropDown = null;
         },
         answerMesssage: function(){
+            
             let objAnswer =
             {
                 date : `${dayjs().hour()}:${dayjs().minute()}`,
@@ -117,6 +119,7 @@ let app = new Vue({
             this.contacts[this.corrente].messages.push(objAnswer);
         },
         sendMessage : function(){
+            
             let objSend = 
             {
                 date : `${dayjs().hour()}:${dayjs().minute()}`,
@@ -125,7 +128,8 @@ let app = new Vue({
             }
             this.contacts[this.corrente].messages.push(objSend);
             this.valoreTesto = '';
-            this.answer = setTimeout(this.answerMesssage,2000);
+            const contattoIndice = this.corrente;
+            this.answer = setTimeout(this.answerMesssage(contattoIndice),3000);
         },
         searchContact : function(){
             this.contacts.forEach(elemento => {
