@@ -16,7 +16,7 @@ li:hover,
 i:hover{
     cursor: pointer;
 }
-.box_message ~i{
+.box_message:hover i{
     cursor: pointer;
     opacity: 1;
 }
@@ -46,9 +46,7 @@ i:hover{
 .right_container{
     width: 65%;
     height: 100%;
-    background-image: url(https://images-ext-1.discordapp.net/external/JYkTAhOVokdezxtd4zc1zZPpU6VoUq9AQoSihbIONiI/https/i.pinimg.com/originals/85/ec/df/85ecdf1c3611ecc9b7fa85282d9526e0.jpg?width=363&height=536);
-    background-repeat: no-repeat;
-    background-size:cover ;
+    background-image: url(img/chat-background-dark.png);
 }
 .top_left,
 .top_right{
@@ -155,6 +153,11 @@ i:hover{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.chat_container::-webkit-scrollbar{
+    display: none;
 }
 .box_message{
     font-size: 16px;
@@ -162,8 +165,8 @@ i:hover{
 }
 .box_message i{
     position: absolute;
-    top:2px;
-    right: 4px;
+    top:5px;
+    right: 8px;
     opacity: 0;
 }
 .box_message_sent{
@@ -177,16 +180,18 @@ i:hover{
 .box_message_received{
     color: white;
     margin: 10px;
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 8px;
     min-width:40%;
     max-width: 40%;
     word-break: break-word;
 }
 .date_message{
-    position: absolute;
+    /* position: absolute;
     bottom: 5px;
-    right:3px;
+    right:3px; */
+    text-align: right;
+    margin-top: 10px;
     font-size: 12px;
 }
 /* footer right input text message */
@@ -212,14 +217,16 @@ i:hover{
     height: 40px;
     border: none;
 }
+
 /* PROPRIETA' DROPDOWN MENU' MESSAGE */
 .dropdown_menu_message{
     width: 150px;
-    height: 75px;
-    padding: 10px;
+    padding: 10px 0px;
     background-color:#2E3336;
     color: white;
-    box-shadow: 2px 2px 2px 2px black;
+    font-weight: 100;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,0.3);
+    border-radius: 3px;
     text-align: center;
     list-style: none;
     position: absolute;
@@ -228,7 +235,7 @@ i:hover{
     display: none;
 }
 .dropdown_menu_message li{
-    padding: 5px;
+    padding: 10px;
 }
 
 /* PROPRIETA' IMG INTRO APP */
