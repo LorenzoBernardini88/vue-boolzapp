@@ -114,7 +114,7 @@ let app = new Vue({
             
             let objAnswer =
             {
-                date : `${dayjs().hour()}:${dayjs().minute()}`,
+                date : dayjs().format("DD/MM/YYYY HH:mm"),
                 text: 'Bravo',
                 status: 'received'
             }
@@ -124,7 +124,7 @@ let app = new Vue({
         sendMessage : function(corrente){
             let objSend = 
             {
-                date : `${dayjs().hour()}:${dayjs().minute()}`,
+                date : dayjs().format("DD/MM/YYYY HH:mm"),
                 text: this.valoreTesto,
                 status: 'sent'
             }
