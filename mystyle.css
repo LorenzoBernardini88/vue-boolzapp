@@ -6,7 +6,6 @@
 body{
     font-family:'Roboto', sans-serif ;
     color: white;
-    background-image: url(https://images-ext-1.discordapp.net/external/DijgH1oGkpKRGW_soO3IQtj0wewJ6RbVjhEWZQlW3oU/https/user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png?width=292&height=536);
 }
 
 /* EFFETTI HOVER */
@@ -21,6 +20,9 @@ i:hover{
     cursor: pointer;
     opacity: 1;
 }
+.dropdown_menu_message li:hover{
+    background-color: #20272B;
+}
 /* CLASSE HIDDEN PER FUNZIONE searchContact in VUE.JS */
 .hidden{
     display: none!important;
@@ -32,11 +34,8 @@ i:hover{
 
 /* PROPRIETA' MACRO STRUTTURA */
 #container{
-    width: 90%;
     height: 100vh;
-    margin: 50px auto;
     display: flex;
-    border-radius: 50px;
 }
 .left_container{
     width: 35%;
@@ -220,7 +219,7 @@ i:hover{
     padding: 10px;
     background-color:#2E3336;
     color: white;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px 2px black;
     text-align: center;
     list-style: none;
     position: absolute;

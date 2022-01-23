@@ -62,7 +62,7 @@
             <div class="footer_intro"></div>
         </div>
 
-        <div v-else class="right_container">
+        <div v-else class="right_container" >
             <!-- contenitore 'top right' che contiene img profilo e icone -->
             <div  class="top_right">
                 <div class="img_profilo_container">
@@ -78,9 +78,9 @@
                 </div>
             </div>
             <!-- contenitore conversazione boolzapp -->
-            <div  class="chat_container" @mouseover='correnteDropDown = -1'>
+            <div  class="chat_container" >
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
-                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)' ></i>
+                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @mouseover='correnteDropDown = -1' ></i>
                         <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
                             <li>Message Info</li>
                             <li @click="deleteMessage(indice)">Delete Message</li>
