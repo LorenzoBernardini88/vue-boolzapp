@@ -218,8 +218,9 @@ i:hover{
     width: 150px;
     height: 75px;
     padding: 10px;
-    background-color:white;
-    color: black;
+    background-color:#2E3336;
+    color: white;
+    box-shadow: 2px 2px 2px black;
     text-align: center;
     list-style: none;
     position: absolute;

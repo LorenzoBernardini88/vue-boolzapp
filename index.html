@@ -61,12 +61,14 @@
             <p>Boolzapp si collega al tuo telfono per sincronizzare i messaggi.Per ridurre l'utilizzo dei dati,collega il telefono al WI-FI</p>
             <div class="footer_intro"></div>
         </div>
+
         <div v-else class="right_container">
             <!-- contenitore 'top right' che contiene img profilo e icone -->
             <div  class="top_right">
                 <div class="img_profilo_container">
                     <img :src="contacts[corrente].avatar" alt="">
                     <div class="nome_utente">{{contacts[corrente].name}}</div>
+                    <div class="info_connessione_utente"></div>
                 </div>
                 <div class="icon_container">
                     <i class="fas fa-video"></i>
@@ -76,9 +78,9 @@
                 </div>
             </div>
             <!-- contenitore conversazione boolzapp -->
-            <div  class="chat_container" >
-                    <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)" >
-                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @dblclick='correnteDropDown = -1'></i>
+            <div  class="chat_container" @mouseover='correnteDropDown = -1'>
+                    <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
+                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)' ></i>
                         <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
                             <li>Message Info</li>
                             <li @click="deleteMessage(indice)">Delete Message</li>
