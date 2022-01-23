@@ -108,9 +108,13 @@ i:hover{
     border-radius: 20px;
     width: 90%;
     height: 40px;
-    text-align: center;
+    padding-left: 50px;
     color: lightgray;
     background-color: #2E3336;
+    background-image: url(img/search-solid.svg);
+    background-repeat: no-repeat;
+    background-size:20px;
+    background-position:20px;
 }
 /* box contact */
 .box_contact{
