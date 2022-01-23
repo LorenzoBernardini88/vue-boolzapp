@@ -6,7 +6,7 @@ let app = new Vue({
         valoreTesto: '',
         answer : null,
         block: false,
-        corrente: 0,
+        corrente: null,
         correnteDropDown:-1,
         
         contacts: [

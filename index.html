@@ -56,8 +56,9 @@
         </div>
         <!-- COLONNA DESTRA -->
         <div class="right_container">
+            
             <!-- contenitore 'top right' che contiene img profilo e icone -->
-            <div class="top_right">
+            <div v-if="corrente !=null" class="top_right">
                 <div class="img_profilo_container">
                     <img :src="contacts[corrente].avatar" alt="">
                     <div class="nome_utente">{{contacts[corrente].name}}</div>
@@ -70,7 +71,7 @@
                 </div>
             </div>
             <!-- contenitore conversazione boolzapp -->
-            <div class="chat_container" >
+            <div v-if="corrente !=null" class="chat_container" >
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)" >
                         <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @dblclick='correnteDropDown = -1'></i>
                         <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
@@ -82,7 +83,7 @@
                     </div>
             </div>
             <!-- footer right con input text per scrivere ed inviare messaggio -->
-            <div class="footer_right">
+            <div v-if="corrente !=null" class="footer_right">
                 <input type="text" placeholder="Scrivi un messaggio" v-model='valoreTesto' @keyup.enter='sendMessage'>
                 <i class="fas fa-microphone"></i>
             </div>
