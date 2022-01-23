@@ -80,8 +80,8 @@
             <!-- contenitore conversazione boolzapp -->
             <div  class="chat_container" >
                     <div class="box_message" v-for="(testo,indice) in contacts[corrente].messages"  :class="viewMessage(indice)">
-                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)' @mouseover='correnteDropDown = -1' ></i>
-                        <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}">
+                        <i class="fas fa-angle-down" @click='downMenuMessage(indice)'></i>
+                        <ul class="dropdown_menu_message" :class="{show:  correnteDropDown==indice}" @mouseleave='correnteDropDown = -1'>
                             <li>Message Info</li>
                             <li @click="deleteMessage(indice)">Delete Message</li>
                         </ul>
