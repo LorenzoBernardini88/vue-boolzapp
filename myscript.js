@@ -137,7 +137,7 @@ let app = new Vue({
         //funzione collegata all'input text colonna di sinistra che filtra la lista contatti.
         searchContact : function(){
             this.contacts.forEach(elemento => {
-                if(!elemento.name.toLowerCase().includes(this.valoreSearch)){
+                if(!elemento.name.toLowerCase().includes(this.valoreSearch.toLowerCase())){
                     console.log(elemento.visible);
                     elemento.visible=true;
                 }else{
